@@ -15,6 +15,8 @@ Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		stint\stint\stint.projitems*{00f664b0-7305-4b04-9cee-9d58ac71d248}*SharedItemsImports = 4
 		stint\stint\stint.projitems*{97b8c2cd-88e6-4c9c-816d-19eb51635233}*SharedItemsImports = 13
+		stint\stint\stint.projitems*{e3ec2dac-fe66-4c5a-a640-4ed686ea9186}*SharedItemsImports = 4
+		stint\stint\stint.projitems*{14be9af3-6bfc-4e96-b6e3-01a7c7b025cb}*SharedItemsImports = 4
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|Any CPU = Ad-Hoc|Any CPU

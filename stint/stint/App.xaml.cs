@@ -3,18 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using Xamarin.Forms;
 
 namespace stint
 {
 	public partial class App : Application
-	{
-		public App ()
+    {
+        public static bool IsUserLoggedIn{get; set;}
+
+        public App ()
 		{
 			InitializeComponent ();
-
-            MainPage = new ContentPage
+            
+            MainPage = new RootPage();
+            /*MainPage = new ContentPage
             {
                 Content = new StackLayout
                 {
@@ -26,7 +28,15 @@ namespace stint
                         }
                     }
                 }
-            };
+            };*/
+
+
         }
+
+        public void ShowLoggedInRootPage()
+        {
+            MainPage = new RootPage();
+        }
+
 	}
 }
