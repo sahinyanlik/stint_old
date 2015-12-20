@@ -1,4 +1,5 @@
-﻿using stint.Interfaces;
+﻿using Newtonsoft.Json;
+using stint.Interfaces;
 using stint.Models;
 using stint.Services;
 using System;
@@ -34,13 +35,13 @@ namespace stint.Pages
                 UserPassword = passwordEntry.Text
             };
 
-            var content =await UserService.CredentialControl(user);
-
+            bool result = await UserService.loginUser(user);
             
-
-            if (content!=null)
+            if (result == true)
             {
-                App.IsUserLoggedIn = true;
+                MainServices.GotoMainPage();
+                // HttpResponseModel content = await UserService.CredentialControl(user);
+                
                 // Navigation.InsertPageBefore(new ContentPage(), this);
                 //  MessagingCenter.Send<ContentPage>(this, "Create");
                 //Page displayPage = (Page)Activator.CreateInstance(typeof(ContractsPage));
@@ -54,9 +55,8 @@ namespace stint.Pages
                 // await this.Navigation.PushAsync(new ContractsPage());
                 //MenuListData data = new MenuListData();
 
-                RootPage mv = new RootPage();
-                mv.Detail = new NavigationPage(new ContractsPage());
-                App.Current.MainPage = mv;
+
+                
             }
             else
             {
@@ -66,6 +66,7 @@ namespace stint.Pages
             
         }
 
+       
         bool AreCredintialsCorrect(User user)
         {
             UserService service = new UserService();

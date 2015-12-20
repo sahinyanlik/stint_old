@@ -8,13 +8,16 @@ using Xamarin.Forms;
 
 namespace stint
 {
-    
+
     public class MenuPage : ContentPage
     {
         public ListView Menu { get; set; }
-        public MenuPage(){
-            //Icon = "settings.png";
-            Title = "menu";
+        public MenuPage()
+        {
+            Icon = "/Images/menuIcon.png";
+            string title = "MENU";
+            Title = title;
+            if (App.IsUserLoggedIn != true) { title = "Menu"; } else { title = "Menu - " + App.User.UserName; };
             BackgroundColor = Color.FromHex("3333333");
             Menu = new MenuListView();
 
@@ -23,30 +26,25 @@ namespace stint
                 Spacing = 0,
                 VerticalOptions = LayoutOptions.FillAndExpand
             };
-
             
+            var menuLabel = new ContentView
+            {
 
-                var menuLabel = new ContentView
+                Padding = new Thickness(10, 36, 0, 5),
+                Content = new Xamarin.Forms.Label
                 {
-                    Padding = new Thickness(10, 36, 0, 5),
-                    Content = new Xamarin.Forms.Label
-                    {
-                        TextColor = Color.FromHex("AAAAAA"),
-                        Text = "MENU"
-                    }
+                    TextColor = Color.FromHex("AAAAAA"),
+                    Text = title
+                }
 
-                };
-                layout.Children.Add(menuLabel);
+            };
+            layout.Children.Add(menuLabel);
             
-
-
-
-
             layout.Children.Add(Menu);
 
             Content = layout;
 
         }
 
-	}
+    }
 }

@@ -32,6 +32,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)MenuListData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MenuListView.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MenuPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\HttpResponseModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\User.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Pages\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
@@ -43,6 +44,7 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)RootPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\Constants.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\MainServices.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\UserService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)testPage.xaml.cs">
       <DependentUpon>testPage.xaml</DependentUpon>
@@ -77,5 +79,13 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Images\appbar.debug.step.out.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Images\menuIcon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 </Project>

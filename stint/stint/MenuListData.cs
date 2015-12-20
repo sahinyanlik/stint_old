@@ -17,14 +17,14 @@ namespace stint
                 menuItems.Add(new MenuItem()
                 {
                     Title = "Contracts",
-                    IconSource = "contracts.png",
+                    IconSource = "Images/appbar.debug.step.out.png",
                     TargetType = typeof(ContractsPage)
                 });
 
                 menuItems.Add(new MenuItem()
                 {
                     Title = "Finance",
-                    IconSource = "contracts.png",
+                    IconSource = "/Images/menuIcon.png",
                     TargetType = typeof(Finance)
                 });
 
@@ -34,7 +34,7 @@ namespace stint
                 menuItems.Add(new MenuItem()
                 {
                     Title = "Login",
-                    IconSource = "login.png",
+                    IconSource = "/Images/menuIcon.png",
                     TargetType = typeof(LoginPage)
                 });
             }
