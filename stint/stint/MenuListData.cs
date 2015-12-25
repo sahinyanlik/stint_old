@@ -28,6 +28,13 @@ namespace stint
                     TargetType = typeof(Finance)
                 });
 
+                menuItems.Add(new MenuItem()
+                {
+                    Title = "Logout",
+                    IconSource = "Images/logout.png",
+                    TargetType = typeof(Profile)
+                });
+
             }
             else
             {
@@ -36,6 +43,13 @@ namespace stint
                     Title = "Login",
                     IconSource = "/Images/menuIcon.png",
                     TargetType = typeof(LoginPage)
+                });
+
+                menuItems.Add(new MenuItem()
+                {
+                    Title = "Signup",
+                    IconSource = "/Images/signup.png",
+                    TargetType = typeof(SignUpPage)
                 });
             }
 

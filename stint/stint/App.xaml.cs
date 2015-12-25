@@ -32,7 +32,7 @@ namespace stint
             {
                 if ( CrossConnectivity.Current.IsConnected == true)
                 {
-                    if(IsFirstTime == "false")
+                    if(IsFirstTime == "false" && !Properties["User"].Equals(""))
                     {
                         LoginUser();
                     }

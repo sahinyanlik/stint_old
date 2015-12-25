@@ -1,4 +1,6 @@
-﻿using stint.Models;
+﻿using Plugin.Connectivity;
+using stint.Models;
+using stint.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,28 +28,47 @@ namespace stint.Pages
             };
 
             // Sign up logic goes here
-
-            var signUpSucceeded = AreDetailsValid(user);
-            if (signUpSucceeded)
+            if (CrossConnectivity.Current.IsConnected == true)
             {
-                var rootPage = Navigation.NavigationStack.FirstOrDefault();
-                if (rootPage != null)
+                var signUpSucceeded = AreDetailsValid(user);
+                if (signUpSucceeded)
                 {
-                    App.IsUserLoggedIn = true;
-                    Navigation.InsertPageBefore(new RootPage(), Navigation.NavigationStack.First());
-                    await Navigation.PopToRootAsync();
+                    var rootPage = Navigation.NavigationStack.FirstOrDefault();
+                    if (rootPage != null)
+                    {
+                        // Flow is now on email.
+                        HttpResponseModel result = await UserService.createUserSendMail(user);
+                        if ( result.succeeded)
+                        {
+                            AlertServices.Alert(Constants.userCreatingCheckYourMail);
+                            MainServices.GotoMainPage();
+                        }
+                        else
+                        {
+                            AlertServices.Alert(Constants.cannotSave +" "+result.message);
+                        }
+
+                        // App.IsUserLoggedIn = true;
+                        // Navigation.InsertPageBefore(new RootPage(), Navigation.NavigationStack.First());
+                        // await Navigation.PopToRootAsync();
+                    }
+                }
+                else {
+                    AlertServices.Alert(Constants.userNameNotEmail);
+                    //messageLabel.Text = "Sign up failed";
                 }
             }
-            else {
-                messageLabel.Text = "Sign up failed";
+            else
+            {
+                AlertServices.Alert(Constants.noInternetConnection);
             }
         }
 
 
         bool AreDetailsValid(User user)
         {
-            //return (!string.IsNullOrWhiteSpace(user.Username) && !string.IsNullOrWhiteSpace(user.Password) && !string.IsNullOrWhiteSpace(user.Email) && user.Email.Contains("@"));
-            return true;
+            return (!string.IsNullOrWhiteSpace(user.UserName) && user.UserName.Contains("@"));
+            
         }
 
     }

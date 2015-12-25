@@ -1,13 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="stint.Pages.SignUpPage"
-  xmlns:local="clr-namespace:stint;assembly=stint">
+             x:Class="stint.Pages.Profile"
+             xmlns:local="clr-namespace:stint;assembly=stint"
+             Title="Profile">
+
   <ContentPage.Content>
     <StackLayout VerticalOptions="StartAndExpand">
-      <Entry x:Focused="true" x:Keyboard="Email"  x:Name="usernameEntry" x:Placeholder="Username" />
-      <Button Text="Sign Up" Clicked="OnSignUpButtonClicked" />
-      
+      <Label x:Name="username"></Label>
+      <Button Text="Logout" Clicked="OnLogoutButtonClicked"/>
     </StackLayout>
   </ContentPage.Content>
+	
 </ContentPage>

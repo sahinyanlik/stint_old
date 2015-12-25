@@ -33,6 +33,18 @@ namespace stint.Services
             return m;
         }
 
+        public static async Task<HttpResponseModel> createUserSendMail(User user)
+        {
+            var path = userServicePath + "/conn/user_selfservice.asmx/Register?Email=" + user.UserName;
+            var httpClient = new HttpClient();
+            HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get, path);
+            var response = await httpClient.SendAsync(request);
+            string a = await response.Content.ReadAsStringAsync();
+            HttpResponseModel m = JsonConvert.DeserializeObject<HttpResponseModel>(a);
+            return m;
+        }
+
+       
 
         public static async Task<User> getUserInfo(HttpResponseModel model)
         {

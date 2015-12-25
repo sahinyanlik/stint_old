@@ -12,5 +12,6 @@ namespace stint.Services
             var page =  new Page().DisplayAlert("Alert",alert, "OK");
         }
 
+       
     }
 }
