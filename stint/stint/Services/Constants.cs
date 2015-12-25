@@ -6,8 +6,7 @@ namespace stint.Services
 {
     class Constants
     {
-        public static string Username = "sahin";
-        public static string Password = "123456";
+        public static string noInternetConnection = "There is no access to internet";
     }
 
 

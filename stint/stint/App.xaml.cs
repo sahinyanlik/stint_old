@@ -1,6 +1,8 @@
 ﻿using Newtonsoft.Json;
+using Plugin.Connectivity;
 using stint.Models;
 using stint.Services;
+using stint.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,19 +16,46 @@ namespace stint
     {
         public static bool IsUserLoggedIn{get; set;}
         public static User User { get; set; }
-        
+        public static string IsFirstTime { get; set; }
 
         public App ()
 		{
 			InitializeComponent ();
+            IsFirstTime = "true";
+
+            if (Properties.ContainsKey("IsFirstTime"))
+            {
+                IsFirstTime = "false";
+            }
 
             if (Properties.ContainsKey("User"))
             {
-                LoginUser();
-                 
+                if ( CrossConnectivity.Current.IsConnected == true)
+                {
+                    if(IsFirstTime == "false")
+                    {
+                        LoginUser();
+                    }
+                }
+                else
+                {
+                    AlertServices.Alert(Constants.noInternetConnection);
+                }
+
+                
             }
 
-            MainPage = new RootPage();
+
+            if(IsFirstTime.Equals("false"))
+            {
+                MainPage = new RootPage();
+            }
+            else {
+                MainPage = new Carousel();
+            }
+
+
+
             /*MainPage = new ContentPage
             {
                 Content = new StackLayout

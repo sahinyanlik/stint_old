@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Plugin.Connectivity;
 using stint.Interfaces;
 using stint.Models;
 using stint.Services;
@@ -12,16 +13,16 @@ using Xamarin.Forms;
 
 namespace stint.Pages
 {
-	public partial class LoginPage : ContentPage
-	{
-       
-		public LoginPage ()
-		{
-			InitializeComponent ();
-          
-		}
+    public partial class LoginPage : ContentPage
+    {
 
-        async void OnSignUpButtonClicked(object sender,EventArgs e)
+        public LoginPage()
+        {
+            InitializeComponent();
+
+        }
+
+        async void OnSignUpButtonClicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new SignUpPage());
         }
@@ -34,44 +35,50 @@ namespace stint.Pages
                 UserName = usernameEntry.Text,
                 UserPassword = passwordEntry.Text
             };
-
-            bool result = await UserService.loginUser(user);
-            
-            if (result == true)
+            if (CrossConnectivity.Current.IsConnected == true)
             {
-                MainServices.GotoMainPage();
-                // HttpResponseModel content = await UserService.CredentialControl(user);
-                
-                // Navigation.InsertPageBefore(new ContentPage(), this);
-                //  MessagingCenter.Send<ContentPage>(this, "Create");
-                //Page displayPage = (Page)Activator.CreateInstance(typeof(ContractsPage));
-                //NavigationPage page = new NavigationPage(new ContractsPage());
-                // var homeNav = new NavigationPage(RootPage.)
-
-                // await Navigation.PopAsync();
-
-                // await Navigation.PopAsync();
-                // ilm.ShowLoggedInRootPage();
-                // await this.Navigation.PushAsync(new ContractsPage());
-                //MenuListData data = new MenuListData();
 
 
-                
+                bool result = await UserService.loginUser(user);
+
+                if (result == true)
+                {
+                    MainServices.GotoMainPage();
+                    // HttpResponseModel content = await UserService.CredentialControl(user);
+
+                    // Navigation.InsertPageBefore(new ContentPage(), this);
+                    //  MessagingCenter.Send<ContentPage>(this, "Create");
+                    //Page displayPage = (Page)Activator.CreateInstance(typeof(ContractsPage));
+                    //NavigationPage page = new NavigationPage(new ContractsPage());
+                    // var homeNav = new NavigationPage(RootPage.)
+
+                    // await Navigation.PopAsync();
+
+                    // await Navigation.PopAsync();
+                    // ilm.ShowLoggedInRootPage();
+                    // await this.Navigation.PushAsync(new ContractsPage());
+                    //MenuListData data = new MenuListData();
+
+                }
+                else
+                {
+                    messageLabel.Text = "Login Failed";
+                    passwordEntry.Text = string.Empty;
+                }
             }
             else
             {
-                messageLabel.Text = "Login Failed";
-                passwordEntry.Text = string.Empty;
+                AlertServices.Alert(Constants.noInternetConnection);
             }
-            
+
         }
 
-       
+
         bool AreCredintialsCorrect(User user)
         {
             UserService service = new UserService();
             //service.controlUser(user);
-             
+
             return true;
             //return user.Username == Constants.Username && user.Password == Constants.Password;
         }

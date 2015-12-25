@@ -1,4 +1,5 @@
 ﻿
+using stint.Views;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -12,14 +13,17 @@ namespace stint
         public RootPage()
         {
             menuPage = new MenuPage();
-
+            IsGestureEnabled = true;
             menuPage.Menu.ItemSelected += (sender, e) => NavigateTo(e.SelectedItem as MenuItem);
 
             Master = menuPage;
+
             Detail = new NavigationPage(new ContentPage());
+
+
         }
 
-       public void NavigateTo(MenuItem menu)
+        public void NavigateTo(MenuItem menu)
         {
             if (menu == null)
                 return;
@@ -31,7 +35,7 @@ namespace stint
 
             if (Detail != null && Device.OS == TargetPlatform.WinPhone)
             {
-                 Detail.Navigation.PopToRootAsync();
+                Detail.Navigation.PopToRootAsync();
             }
 
             menuPage.Menu.SelectedItem = null;

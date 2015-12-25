@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="stint.Views.Carousel">
+
+  <ContentPage StyleId="first" >
+    <RelativeLayout>
+      <Image Source="Images/Carousel/1.jpg" Opacity="0.6"
+                  RelativeLayout.WidthConstraint=
+                  "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+                  RelativeLayout.HeightConstraint=
+                  "{ConstraintExpression Type=RelativeToParent, Property=Height}"/>
+
+
+      <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+                    iOS="0, 20, 0, 0" />
+      </ContentPage.Padding>
+  <!--  RelativeLayout.WidthConstraint=
+              "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+            RelativeLayout.HeightConstraint=
+              "{ConstraintExpression Type=RelativeToParent, Property=Height}" -->
+      <Grid>
+        <Grid.RowDefinitions>
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="*" />
+         
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="Auto" />
+          <ColumnDefinition Width="*" />
+          
+        </Grid.ColumnDefinitions>
+
+        <Label
+               Grid.Row="0" Grid.Column="0"
+               TextColor="White"
+               FontSize="Large"
+               
+               >
+          <Label.Text>
+            Like you, we are all students &#10;
+          </Label.Text>
+        </Label>
+
+        <Label Grid.Row="1" Grid.Column="0"
+              TextColor="White"
+               FontSize="Large"
+              >
+          <Label.Text>And we know how we want to hang out with friends without worrying about money. Or if there’s something particular we want to spoil ourselves with. &#10;</Label.Text>
+        </Label>
+
+        <Label
+              Grid.Row="2" Grid.Column="0"
+              TextColor="White"
+               FontSize="Large"
+              >
+          <Label.Text>But our ‘typical’ student schedules prevent us from committing to any job. So why not, create a platform for students like ourselves &#10; </Label.Text>
+        </Label>
+
+      </Grid>
+      
+      
+  
+
+    </RelativeLayout>
+
+  </ContentPage>
+
+    <ContentPage  StyleId="second">
+    <RelativeLayout>
+      <Image Source="Images/Carousel/2.jpg" Opacity="0.3"
+                  RelativeLayout.WidthConstraint=
+                  "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+                  RelativeLayout.HeightConstraint=
+                  "{ConstraintExpression Type=RelativeToParent, Property=Height}"/>
+
+      <Grid RelativeLayout.WidthConstraint=
+              "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+            RelativeLayout.HeightConstraint=
+              "{ConstraintExpression Type=RelativeToParent, Property=Height}">
+
+        <Label Text="Think about this.     You may have the busiest floors service in the country or have the biggest labour count in any  factory.     How about at the end of the month,you pay only one employee  – Stint.     
+You have positions that have to be filled but it’s never easy finding someone who’ll commit.   “Thin Slice” these job openings. A few employees committing on a daily basis. Who does this for you – Stint.    
+  Need a last minute extra pair of hands for a packed restaurant service tonight or for a busy  weekend?   We are casual labor; we’ll get you your last minute pair of hands. Cause we are – Stint.       Host a Stint. – Remodel your life  "
+               
+           HorizontalOptions="Center" FontSize="Large"/>
+      </Grid>
+
+
+    </RelativeLayout>
+
+  </ContentPage>
+
+  <ContentPage  StyleId="third">
+    <RelativeLayout>
+      <Image Source="Images/Carousel/3.jpg" Opacity="0.6"
+                  RelativeLayout.WidthConstraint=
+                  "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+                  RelativeLayout.HeightConstraint=
+                  "{ConstraintExpression Type=RelativeToParent, Property=Height}"/>
+    </RelativeLayout>
+    <Grid RelativeLayout.WidthConstraint=
+              "{ConstraintExpression Type=RelativeToParent, Property=Width}"
+                RelativeLayout.HeightConstraint=
+              "{ConstraintExpression Type=RelativeToParent, Property=Height}">
+
+      <Label Text="Hello world from XAML" VerticalOptions="Center"
+         HorizontalOptions="Center" FontSize="20"/>
+    </Grid>
+  </ContentPage>
+</CarouselPage>
