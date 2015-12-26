@@ -62,7 +62,7 @@ namespace stint.Pages
                 }
                 else
                 {
-                    messageLabel.Text = "Login Failed";
+                    AlertServices.Alert(Constants.loginFailed);
                     passwordEntry.Text = string.Empty;
                 }
             }

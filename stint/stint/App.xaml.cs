@@ -73,6 +73,8 @@ namespace stint
 
         }
 
+
+
         public void ShowLoggedInRootPage()
         {
             MainPage = new RootPage();

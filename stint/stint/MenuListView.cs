@@ -13,6 +13,7 @@ namespace stint
             List<MenuItem> data = new MenuListData();
             ItemsSource = data;
             VerticalOptions = LayoutOptions.FillAndExpand;
+            HorizontalOptions = LayoutOptions.FillAndExpand;
             BackgroundColor = Color.Transparent;
 
             var cell = new DataTemplate(typeof(ImageCell));
