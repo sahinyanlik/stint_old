@@ -45,7 +45,22 @@ namespace stint.Droid
 		{
 			
 			// aapt resource value: 0x7f020000
-			public const int Icon = 2130837504;
+			public const int appbar = 2130837504;
+			
+			// aapt resource value: 0x7f020001
+			public const int icon = 2130837505;
+			
+			// aapt resource value: 0x7f020002
+			public const int menuIcon = 2130837506;
+			
+			// aapt resource value: 0x7f020003
+			public const int one = 2130837507;
+			
+			// aapt resource value: 0x7f020004
+			public const int three = 2130837508;
+			
+			// aapt resource value: 0x7f020005
+			public const int two = 2130837509;
 			
 			static Drawable()
 			{

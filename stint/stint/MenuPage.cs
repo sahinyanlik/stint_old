@@ -14,7 +14,17 @@ namespace stint
         public ListView Menu { get; set; }
         public MenuPage()
         {
-            Icon = "/Images/menuIcon.png";
+            if (Device.OS == TargetPlatform.Android)
+            {
+                // move layout under the status bar
+                Icon = "menuIcon.png";
+            }
+            else
+            {
+                Icon = "/Images/menuIcon.png";
+            }
+            // 
+            Icon = "menuIcon";
             string title = "MENU";
             Title = title;
             if (App.IsUserLoggedIn != true) { title = "Menu"; } else { title = "Menu - " + App.User.UserName; };

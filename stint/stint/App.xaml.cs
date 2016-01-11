@@ -22,8 +22,8 @@ namespace stint
 		{
 			InitializeComponent ();
             IsFirstTime = "true";
-
-            if (Properties.ContainsKey("IsFirstTime"))
+            
+            if (Application.Current.Properties.ContainsKey("IsFirstTime"))
             {
                 IsFirstTime = "false";
             }
@@ -41,11 +41,8 @@ namespace stint
                 {
                     AlertServices.Alert(Constants.noInternetConnection);
                 }
-
-                
             }
-
-
+             
             if(IsFirstTime.Equals("false"))
             {
                 MainPage = new RootPage();

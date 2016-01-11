@@ -2,5 +2,12 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="stint.Pages.HostMenu">
-	<Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />
+
+  <StackLayout>
+    <Button BackgroundColor="Red" StyleId="h_sector" Text="Sector" BorderColor="Blue" ></Button>
+    <Button BackgroundColor="Red" StyleId="h_date" Text="Date" BorderColor="Blue" ></Button>
+    <Button BackgroundColor="Red" StyleId="h_area" Text="Area" BorderColor="Blue" ></Button>
+    <Button BackgroundColor="Red" StyleId="h_num_hands" Text="Number of Hired Hands" BorderColor="Blue" ></Button>
+    <Button BackgroundColor="Blue" StyleId="h_handmain" Text="Grab a Stint" BorderColor="Red" Clicked="OnHandStintClicked"></Button>
+  </StackLayout>
 </ContentPage>

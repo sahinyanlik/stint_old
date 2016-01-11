@@ -29,6 +29,7 @@ namespace stint.Views
             {
                 App.IsFirstTime = "false";
                 App.Current.Properties["IsFirstTime"] = "false";
+               
                 MainServices.GotoMainPage();
             }
             

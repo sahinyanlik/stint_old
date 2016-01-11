@@ -3,9 +3,33 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="stint.Views.Carousel">
 
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <OnPlatform x:Key="one"
+                x:TypeArguments="ImageSource"
+                iOS="contact.png"
+                Android="one.jpg"
+                WinPhone="Images/Carousel/one.jpg" />
+
+      <OnPlatform x:Key="two"
+                x:TypeArguments="ImageSource"
+                iOS="contact2.png"
+                Android="two.jpg"
+                WinPhone="Images/Carousel/two.jpg" />
+
+      <OnPlatform x:Key="three"
+                x:TypeArguments="ImageSource"
+                iOS="contact3.png"
+                Android="three.jpg"
+                WinPhone="Images/Carousel/three.jpg" />
+      
+      
+    </ResourceDictionary>
+  </ContentPage.Resources>
+
   <ContentPage StyleId="first" >
     <RelativeLayout>
-      <Image Source="Images/Carousel/1.jpg" Opacity="0.6"
+      <Image Source="{StaticResource one}" Opacity="0.6"
                   RelativeLayout.WidthConstraint=
                   "{ConstraintExpression Type=RelativeToParent, Property=Width}"
                   RelativeLayout.HeightConstraint=
@@ -70,7 +94,7 @@
 
     <ContentPage  StyleId="second">
     <RelativeLayout>
-      <Image Source="Images/Carousel/2.jpg" Opacity="0.3"
+      <Image Source="{StaticResource two}" Opacity="0.3"
                   RelativeLayout.WidthConstraint=
                   "{ConstraintExpression Type=RelativeToParent, Property=Width}"
                   RelativeLayout.HeightConstraint=
@@ -95,7 +119,7 @@ You have positions that have to be filled but it’s never easy finding someone 
 
   <ContentPage  StyleId="third">
     <RelativeLayout>
-      <Image Source="Images/Carousel/3.jpg" Opacity="0.6"
+      <Image Source="{StaticResource three}" Opacity="0.6"
                   RelativeLayout.WidthConstraint=
                   "{ConstraintExpression Type=RelativeToParent, Property=Width}"
                   RelativeLayout.HeightConstraint=

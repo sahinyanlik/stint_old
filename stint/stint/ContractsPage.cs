@@ -16,18 +16,21 @@ namespace stint
            
 
 
-            var hiredHand = new Image { Source = new Uri("http://dummyimage.com/600x400/ff7300/ffffff.png&text=Hired+Hand") }; 
-            
-            hiredHand.GestureRecognizers.Add(new TapGestureRecognizer(sender => {
+            var hiredHand = new Image { Source = new Uri("http://dummyimage.com/600x400/ff7300/ffffff.png&text=Hired+Hand"), Aspect = Aspect.AspectFit };
+
+            hiredHand.GestureRecognizers.Add(new TapGestureRecognizer { Command = new Command(() => MainServices.GotoHiredHandMenu()) });
+
+           /* hiredHand.GestureRecognizers.Add(new TapGestureRecognizer(sender => {
                 MainServices.GotoHiredHandMenu();
                 
-            }));
+            }));*/
 
-            var host = new Image { Source = new Uri("http://dummyimage.com/600x400/ff0000/ffffff.png&text=Host") }; // make your image your button should be
-            host.GestureRecognizers.Add(new TapGestureRecognizer(sender => {
-                MainServices.GotoHostMenu();
-
-            }));
+           var host = new Image { Source = new Uri("http://dummyimage.com/600x400/ff0000/ffffff.png&text=Host"), Aspect = Aspect.AspectFit }; // make your image your button should be
+            host.GestureRecognizers.Add(new TapGestureRecognizer { Command = new Command(() => MainServices.GotoHostMenu()) });
+            // host.GestureRecognizers.Add(new TapGestureRecognizer(sender => {
+            //     MainServices.GotoHostMenu();
+            //
+            // }));
 
             Content = new StackLayout
             {

@@ -14,5 +14,14 @@ namespace stint.Pages
 		{
 			InitializeComponent ();
 		}
-	}
+
+        async void OnHandStintClicked(object sender, EventArgs args)
+        {
+            await Navigation.PopAsync();
+            await this.Navigation.PushModalAsync(new ContractsPage());
+        }
+
+    }
+
+
 }

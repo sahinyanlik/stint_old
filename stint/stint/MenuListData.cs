@@ -13,25 +13,25 @@ namespace stint
             menuItems = new List<MenuItem>();
             if (App.IsUserLoggedIn)
             {
-               
+                // IconSource = "Images/appbar.debug.step.out.png",
                 menuItems.Add(new MenuItem()
                 {
                     Title = "Contracts",
-                    IconSource = "Images/appbar.debug.step.out.png",
+                    IconSource = "appbar.debug.step.out.png",
                     TargetType = typeof(ContractsPage)
                 });
-
+                // IconSource = "/Images/menuIcon.png",
                 menuItems.Add(new MenuItem()
                 {
                     Title = "Finance",
-                    IconSource = "/Images/menuIcon.png",
+                    IconSource = "menuIcon.png",
                     TargetType = typeof(Finance)
                 });
-
+                // IconSource = "Images/logout.png",
                 menuItems.Add(new MenuItem()
                 {
                     Title = "Logout",
-                    IconSource = "Images/logout.png",
+                    IconSource = "logout.png",
                     TargetType = typeof(Profile)
                 });
 

@@ -13,7 +13,7 @@ namespace stint.Services
         {
             RootPage mv = new RootPage();
             mv.Detail = new NavigationPage(new ContractsPage());
-            App.Current.MainPage = mv;
+            App.Current.MainPage =  mv;
         }
 
         public static void GotoHiredHandMenu()
