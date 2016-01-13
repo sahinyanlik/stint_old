@@ -8,6 +8,6 @@
     <Button BackgroundColor="Red" StyleId="h_date" Text="Date" BorderColor="Blue" ></Button>
     <Button BackgroundColor="Red" StyleId="h_area" Text="Area" BorderColor="Blue" ></Button>
     <Button BackgroundColor="Red" StyleId="h_num_hands" Text="Number of Hired Hands" BorderColor="Blue" ></Button>
-    <Button BackgroundColor="Blue" StyleId="h_handmain" Text="Grab a Stint" BorderColor="Red" Clicked="OnHandStintClicked"></Button>
+    <Button BackgroundColor="Blue" StyleId="h_handmain" Text="Host a Stint" BorderColor="Red" Clicked="OnHandStintClicked"></Button>
   </StackLayout>
 </ContentPage>

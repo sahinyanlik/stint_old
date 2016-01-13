@@ -35,7 +35,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)MenuListData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MenuListView.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MenuPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\BaseAuthRequest.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\HttpResponseModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Job.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\User.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Pages\HiredHandMenu.xaml.cs">
       <DependentUpon>HiredHandMenu.xaml</DependentUpon>
@@ -60,6 +62,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)RootPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\AlertServices.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\Constants.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\JobService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\MainServices.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\UserService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)testPage.xaml.cs">
