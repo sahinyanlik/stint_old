@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="stint.Pages.hh_description_entry">
+
+
+  <StackLayout>
+    <StackLayout Orientation="Horizontal">
+      <Label Text="Position" WidthRequest="100"></Label>
+      <Entry x:Name="position" HorizontalOptions="FillAndExpand"></Entry>
+    </StackLayout>
+    <StackLayout Orientation="Horizontal">
+      <Label Text="Position" WidthRequest="100"></Label>
+      <Entry Keyboard="Numeric" x:Name="nOfHands" HorizontalOptions="FillAndExpand"></Entry>
+    </StackLayout>
+    <StackLayout Orientation="Horizontal">
+      <Label Text="Sector" WidthRequest="100"></Label>
+      <Entry  x:Name="sector" HorizontalOptions="FillAndExpand"></Entry>
+    </StackLayout>
+    <StackLayout Orientation="Vertical">
+      <Label Text="Sector" WidthRequest="100"></Label>
+      <Editor  x:Name="sector" HorizontalOptions="FillAndExpand"></Editor>
+    </StackLayout>
+    
+   </StackLayout>
+
+</ContentPage>

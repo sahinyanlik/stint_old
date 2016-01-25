@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="stint.Pages.hh_detail_entry">
+
+
+  <StackLayout>
+    <StackLayout Orientation="Horizontal">
+      <Label Text="Time" WidthRequest="100"></Label>
+      <Entry x:Name="from_1"></Entry>
+      <Entry x:Name="from_2"></Entry>
+      <Label Text="-" WidthRequest="100"></Label>
+      <Entry x:Name="to_1"></Entry>
+      <Entry x:Name="to_2"></Entry>
+    </StackLayout>
+    
+    <StackLayout Orientation="Horizontal">
+      <Label Text="location" WidthRequest="100"></Label>
+      <Entry  x:Name="location" HorizontalOptions="FillAndExpand"></Entry>
+    </StackLayout>
+
+    <StackLayout Orientation="Horizontal">
+      <Label Text="Area" WidthRequest="100"></Label>
+      <Entry  x:Name="area" HorizontalOptions="FillAndExpand"></Entry>
+    </StackLayout>
+
+    <StackLayout Orientation="Horizontal">
+      <Label Text="Area" WidthRequest="100"></Label>
+      <Entry  x:Name="jobDressCode" HorizontalOptions="FillAndExpand"></Entry>
+    </StackLayout>
+
+  </StackLayout>
+  
+</ContentPage>
