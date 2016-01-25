@@ -13,7 +13,7 @@ namespace stint.Pages
 		public hh_description_entry ()
 		{
 
-            Padding = new Thickness(5, Device.OnPlatform(20, 0, 0), 5, 0);
+            // Padding = new Thickness(5, Device.OnPlatform(20, 0, 0), 5, 0);
             InitializeComponent ();
 		}
 	}

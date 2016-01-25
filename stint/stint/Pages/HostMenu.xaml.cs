@@ -17,8 +17,9 @@ namespace stint.Pages
 
         async void OnHandStintClicked(object sender, EventArgs args)
         {
+            // this
             await Navigation.PopAsync();
-            await this.Navigation.PushModalAsync(new ContractsPage());
+            await Navigation.PushModalAsync(new hh_tab_menu());
         }
 
     }

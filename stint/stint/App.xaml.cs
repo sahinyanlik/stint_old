@@ -20,7 +20,8 @@ namespace stint
 
         public App ()
 		{
-            InitializeComponent ();
+            InitializeComponent();
+
             IsFirstTime = "true";
             
             if (Application.Current.Properties.ContainsKey("IsFirstTime"))

@@ -19,7 +19,7 @@
     </StackLayout>
     <StackLayout Orientation="Vertical">
       <Label Text="Sector" WidthRequest="100"></Label>
-      <Editor  x:Name="sector" HorizontalOptions="FillAndExpand"></Editor>
+      <Editor  x:Name="jobDescription" HorizontalOptions="FillAndExpand"></Editor>
     </StackLayout>
     
    </StackLayout>
