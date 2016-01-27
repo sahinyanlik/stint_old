@@ -8,18 +8,18 @@ using Xamarin.Forms;
 
 namespace stint.Pages
 {
-	public partial class HostMenu : ContentPage
-	{
-		public HostMenu ()
-		{
-			InitializeComponent ();
-		}
+    public partial class HostMenu : ContentPage
+    {
+        public HostMenu()
+        {
+            InitializeComponent();
+        }
 
         async void OnHandStintClicked(object sender, EventArgs args)
         {
             // this
             await Navigation.PopAsync();
-            await Navigation.PushModalAsync(new hh_tab_menu());
+            await this.Navigation.PushModalAsync(new hh_tab_menu());
         }
 
     }

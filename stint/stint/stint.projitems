@@ -31,14 +31,18 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)hh_tab_menu.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\ICameraProvider.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IMainRouter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\ObservableObject.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MenuItem.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MenuListData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MenuListView.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MenuPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\BaseAuthRequest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\CameraResult.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\HttpResponseModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Job.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\TakePictureViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\User.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Pages\hh_description_entry.xaml.cs">
       <DependentUpon>hh_description_entry.xaml</DependentUpon>
@@ -100,6 +104,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)NewFolder\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Properties\" />
     <Folder Include="$(MSBuildThisFileDirectory)ViewModels\" />
     <Folder Include="$(MSBuildThisFileDirectory)Renderers\" />
   </ItemGroup>

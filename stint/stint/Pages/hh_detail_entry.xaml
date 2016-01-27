@@ -6,12 +6,12 @@
 
   <StackLayout>
     <StackLayout Orientation="Horizontal">
-      <Label Text="Time" WidthRequest="100"></Label>
-      <Entry x:Name="from_1"></Entry>
-      <Entry x:Name="from_2"></Entry>
+      <Label  Text="Time" WidthRequest="100"></Label>
+      <Entry Keyboard="Numeric" x:Name="from_1"></Entry>
+      <Entry Keyboard="Numeric" x:Name="from_2"></Entry>
       <Label Text="-" WidthRequest="100"></Label>
-      <Entry x:Name="to_1"></Entry>
-      <Entry x:Name="to_2"></Entry>
+      <Entry Keyboard="Numeric" x:Name="to_1"></Entry>
+      <Entry Keyboard="Numeric" x:Name="to_2"></Entry>
     </StackLayout>
     
     <StackLayout Orientation="Horizontal">

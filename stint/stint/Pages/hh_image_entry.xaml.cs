@@ -1,4 +1,6 @@
-﻿using System;
+﻿using stint.Interfaces;
+using stint.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,6 +15,9 @@ namespace stint.Pages
 		public hh_image_entry ()
 		{
 			InitializeComponent ();
+
+           BindingContext = new TakePictureViewModel(DependencyService.Get<ICameraProvider>());
+
 		}
 	}
 }
